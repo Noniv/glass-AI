@@ -63,8 +63,8 @@ for result in test_y:
 
 # Showing results on plot
 plt.figure(figsize=(15, 8))
-plt.title("Dane testowe - dokładność %.2f %%" % (test_accuracy*100))
-plt.plot(formattedNetworkResults, 'ro', label="Wyjścia oczekiwane")
-plt.plot(formattedResults, 'go', label="Wyjścia sieci")
+plt.title("Test data - accuracy: %.2f %%" % (test_accuracy*100))
+plt.plot(formattedNetworkResults, 'ro', label="Expected output")
+plt.plot(formattedResults, 'go', label="Network output")
 plt.legend(loc="best")
 plt.show()
