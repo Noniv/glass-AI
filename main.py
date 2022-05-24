@@ -30,7 +30,7 @@ test_y = formatted_y[171:, :]
 # Creating model
 model = Sequential()
 model.add(BatchNormalization())
-model.add(Dense(30, input_dim=9, activation='relu'))
+model.add(Dense(30, activation='relu'))
 model.add(Dense(30, activation='relu'))
 model.add(Dense(7, activation='softmax'))
 
@@ -39,7 +39,7 @@ model.compile(loss='categorical_crossentropy',
               optimizer='adam', metrics=['accuracy'])
 
 # Network learning
-model.fit(train_x, train_y, epochs=1000, batch_size=32,
+model.fit(train_x, train_y, epochs=10000, batch_size=32,
           verbose=0, use_multiprocessing=True)
 
 # Showing the results
